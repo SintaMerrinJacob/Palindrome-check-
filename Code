@@ -1,0 +1,29 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <cstring>
+using namespace std;
+
+bool palindromecheck(int k, int n, string &s)
+{
+    if(k>=n)
+     return true;
+    
+     return( s[k]==s[n]  && palindromecheck( k+1, n-1, s) );
+       
+}
+
+
+int main()
+{
+   int n,k=0;
+   string s;
+   cin>>s;
+   n=s.length();
+   if(palindromecheck(k, n-1,s))
+     cout<<"Palindrome";
+   else
+     cout<<"Not";
+   
+   
+   return 0;
+}
